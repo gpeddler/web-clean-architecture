@@ -1,0 +1,24 @@
+{
+  "name": "architecture-laboratory",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/react": "^16.0.20",
+    "@types/react-dom": "^16.0.2",
+    "@types/react-router": "^4.0.16",
+    "@types/react-router-dom": "^4.2.0",
+    "awesome-typescript-loader": "^3.3.0",
+    "axios": "^0.17.0",
+    "babel-polyfill": "^6.26.0",
+    "dotenv-webpack": "^1.5.4",
+    "immutable": "^3.8.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "rxjs": "^5.5.2",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1"
+  }
+}

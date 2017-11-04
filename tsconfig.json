@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "core/*": ["core/*"],
+            "data/*": ["data/*"],
+            "ui/*": ["ui/*"],
+            "utils/*": ["utils/*"],
+            "application/*": ["*"]
+        },
+        "outDir": "./dist",
+        "types": [
+            "node"
+        ],
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "sourceMap": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "noStrictGenericChecks": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
