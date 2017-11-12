@@ -1,4 +1,4 @@
-import { Entity } from "core/entities";
+import { Entity } from "domain/entities";
 
 export class User implements Entity {
     id: number;

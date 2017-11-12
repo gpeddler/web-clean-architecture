@@ -1,8 +1,8 @@
 import { List } from "immutable";
 import { Observable } from "rxjs/Rx";
-import { UserRepositoryType } from "core/repositories/user";
+import { UserRepositoryType } from "domain/repositories/user";
 import { GithubApiProvider } from "data/http/api/github";
-import { User } from "core/entities/user";
+import { User } from "domain/entities/user";
 
 export class UserRepository implements UserRepositoryType {
     private githubApi: GithubApiProvider;

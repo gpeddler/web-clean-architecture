@@ -1,5 +1,5 @@
 import { JSONMapper } from "data/http/mappers";
-import { User } from "core/entities/user";
+import { User } from "domain/entities/user";
 import { lets } from "utils";
 
 export class UserMapper implements JSONMapper<User> {

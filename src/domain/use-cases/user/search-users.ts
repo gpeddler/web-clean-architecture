@@ -1,12 +1,12 @@
-import { UseCase } from "core/use-cases";
+import { UseCase } from "domain/use-cases";
 import { List } from "immutable";
-import { User } from "core/entities/user";
+import { User } from "domain/entities/user";
 import { Observable } from "rxjs/Rx";
-import { UserRepositoryType } from "core/repositories/user";
+import { UserRepositoryType } from "domain/repositories/user";
 
 export class SearchUsers extends UseCase<List<User>> {
     private repository: UserRepositoryType;
-    query: string;
+    query: string = null;
 
     constructor(repository: UserRepositoryType) {
         super();
@@ -18,7 +18,7 @@ export class SearchUsers extends UseCase<List<User>> {
     }
 
     protected validate(): boolean {
-        return this.query && this.query.length > 2;
+        return this.query !== null;
     }
 
 }

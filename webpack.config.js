@@ -13,7 +13,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            core: `${__dirname}/src/core/`,
+            domain: `${__dirname}/src/domain/`,
             data: `${__dirname}/src/data/`,
             ui: `${__dirname}/src/ui/`,
             utils: `${__dirname}/src/utils`,
@@ -32,22 +32,6 @@ module.exports = {
                         configFileName: `${__dirname}/tsconfig.json`
                     }
                 }
-            },
-            {
-                test: /\.p?css$/,
-                exclude: ['/node_modules/', '/dist/'],
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            module: true,
-                            importLoaders: 1,
-                            localIdentName: '[name]__[local]___[hash:base64:5]'
-                        }
-                    },
-                    'postcss-loader'
-                ]
             }
         ]
     },

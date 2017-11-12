@@ -1,4 +1,4 @@
-import { Entity } from "core/entities";
+import { Entity } from "domain/entities";
 
 export interface JSONMapper<T extends Entity> {
     toJSON(entity: T): any;

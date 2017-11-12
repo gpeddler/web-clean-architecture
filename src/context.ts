@@ -1,7 +1,7 @@
 import { AxiosInstance } from "axios";
 import { UserRepository } from "data/repositories/user";
 import { GithubApiProvider } from "data/http/api/github";
-import { SearchUsers } from "core/use-cases/user/search-users";
+import { SearchUsers } from "domain/use-cases/user/search-users";
 
 interface ApiProviderDependencies {
     github: GithubApiProvider;
