@@ -75,7 +75,7 @@ export class GithubSearch extends React.Component<Props, State> {
         this.setState({
             fetchState: FetchState.FETCHING
         },  () =>
-            apply(Application.searchUsers(), it => it.query = query)
+            apply(Application.useCases.searchUsers, it => it.query = query)
                 .runOnAnimateFrame()
                 .subscribe(
                     users =>

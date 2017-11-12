@@ -11,10 +11,15 @@ interface RepositoryDependencies {
     user: UserRepository;
 }
 
+interface UseCaseDependencies {
+    searchUsers: SearchUsers;
+}
+
 export class Context {
     private githubAxiosInstance: AxiosInstance;
     private apiProviders: ApiProviderDependencies;
     private repositories: RepositoryDependencies;
+    useCases: UseCaseDependencies;
 
     constructor(githubAxiosInstance: AxiosInstance) {
         this.githubAxiosInstance = githubAxiosInstance;
@@ -24,7 +29,8 @@ export class Context {
         this.repositories = {
             user: new UserRepository(this.apiProviders.github)
         };
+        this.useCases = {
+            searchUsers: new SearchUsers(this.repositories.user)
+        }
     }
-
-    searchUsers = () => new SearchUsers(this.repositories.user);
 }
